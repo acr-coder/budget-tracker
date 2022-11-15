@@ -1,10 +1,12 @@
 <script>
   import TransactionForm from "./TransactionForm.svelte";
-  import { SearchStore, SelectedTypeStore } from "../stores";
+  import { SearchStore, SelectedTypeStore, ViewStore } from "../stores";
   import { createEventDispatcher } from "svelte";
   
   let selectedType = "all"
   let search = ""
+export let view;
+  
 
   $:$SearchStore = search
 
@@ -18,8 +20,8 @@
 </script>
 <div class="sidebar d-flex flex-column mt-3 rounded  p-3  " style="background-color: #c5cbd8; " >
     <div class="d-flex flex-sm-column justify-content-around">
-      <div on:click={() =>handleView("card")} style="cursor: pointer;" class="mb-2">Card View</div>
-      <div on:click={() =>handleView("table")} style="cursor: pointer;" class="mb-2">Table View</div>
+      <div class:selected={view === "card"} on:click={() =>handleView("card")} style="cursor: pointer;" class="mb-2">Card View</div>
+      <div class:selected={view === "table"} on:click={() =>handleView("table")} style="cursor: pointer;" class="mb-2">Table View</div>
     </div>
     <div>
       <div class="mt-3">

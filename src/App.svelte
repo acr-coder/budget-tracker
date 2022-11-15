@@ -18,7 +18,7 @@
   <Header />
   <div class="d-flex flex-column flex-sm-row ">
     <!-- Sidebar -->
-    <Sidebar on:handleViewSelect = {changeView} />
+    <Sidebar on:handleViewSelect = {changeView} {view} />
     <div class="main flex-grow-1 pt-3 ">
       <TransactionHeader />
       <div  class:show={view != "card"} >
