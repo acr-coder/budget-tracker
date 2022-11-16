@@ -11,7 +11,7 @@
         
       const newTransaction = {
         id: Date.now(),
-        transactionName: tName,
+        transactionName: tName.toLocaleLowerCase(),
         transactionType: tType,
         transactionDate: tDate,
         transactionAmount : tAmount
