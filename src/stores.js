@@ -6,19 +6,19 @@ const initial = [
         transactionName:"maaş",
          transactionType:"Income",
          transactionAmount:5000,
-         transactionDate:"01.01.2022"
+         transactionDate:"01-01-2022"
         },
     {   id:2,
         transactionName:"kira",
          transactionType:"Expense",
          transactionAmount:2000,
-         transactionDate:"05.01.2022"
+         transactionDate:"05-01-2022"
         },
     {   id:3,
         transactionName:"altın",
          transactionType:"Investment",
          transactionAmount:1000,
-         transactionDate:"09.01.2022"
+         transactionDate:"09-01-2022"
         },
 ]
 
